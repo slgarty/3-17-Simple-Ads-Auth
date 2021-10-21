@@ -1,0 +1,18 @@
+﻿@model HomeViewModel
+@foreach (SimpleAd simpleAd in Model.SimpleAds)
+{
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="jumbotron">
+
+            <h5>Listed on @simpleAd.DateListed</h5>
+            <h5>Phone Number: @simpleAd.PhoneNumber</h5>
+            <h3>Details:</h3>
+            <p>@simpleAd.Details</p>
+            <form method="post" action="/home/deletead">
+                <input type="hidden" name="id" value="@simpleAd.Id" />
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>}

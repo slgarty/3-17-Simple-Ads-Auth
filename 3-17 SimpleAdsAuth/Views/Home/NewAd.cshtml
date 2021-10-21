@@ -1,0 +1,21 @@
+﻿@model HomeViewModel
+            <div class="col-md-6 offset-md-3">
+                <h2>New Ad</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 jumbotron">
+                    <form method="post" action="/home/newad">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="hidden" name="UserId" value="@Model.CurrentUser.Id" />
+                                
+                                <input type="text" placeholder="Phone Number" class="form-control" name="phonenumber" />
+                            </div>
+                        </div>
+                        <br />
+                        <textarea name="details" class="form-control" rows="10" placeholder="Details"></textarea>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
